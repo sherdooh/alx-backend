@@ -9,11 +9,11 @@ client.on('error', (error) => {
 client.on('connect', () => {
   console.log('Redis client connected to the server');
 });
-
+//function set new school
 function setNewSchool(schoolName, value) {
   client.set(schoolName, value, redis.print);
 }
-
+//function display schoolvalue
 function displaySchoolValue(schoolName) {
   client.get(schoolName, (err, res) => {
     console.log(res);
